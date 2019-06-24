@@ -7,7 +7,7 @@ def getc(size, timeout=1):
     return sys.stdin.read(size) or None
 
 def putc(data, timeout=1):
-    print data
+    sys.stdout.write(data)
 
 modem = YMODEM(getc, putc)
 
